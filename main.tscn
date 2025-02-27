@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://064ww3dyb7em"]
+[gd_scene load_steps=3 format=3 uid="uid://064ww3dyb7em"]
+
+[ext_resource type="PackedScene" uid="uid://b7lstwl2kt8mp" path="res://objects/box.tscn" id="2_o3iky"]
+[ext_resource type="PackedScene" uid="uid://bdyp1kk7e62ou" path="res://objects/ground.tscn" id="2_u6cfi"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_o3iky")]
+position = Vector2(488, 160)
+mass = 2.0
+angular_velocity = 5.23599
+script = null
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+position = Vector2(0, 3)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_u6cfi")]
