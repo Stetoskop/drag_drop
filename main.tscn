@@ -1,84 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://064ww3dyb7em"]
+[gd_scene load_steps=6 format=3 uid="uid://064ww3dyb7em"]
 
-[ext_resource type="Texture2D" uid="uid://c0xqpp7iws63k" path="res://objects/ground/icon.svg" id="2_bym4m"]
+[ext_resource type="Script" path="res://main.gd" id="1_8sxw7"]
+[ext_resource type="Script" path="res://objects/mouse_collider/mouse_collider.gd" id="2_a50gh"]
 [ext_resource type="PackedScene" uid="uid://b7lstwl2kt8mp" path="res://objects/ball/ball.tscn" id="2_o3iky"]
 [ext_resource type="PackedScene" uid="uid://bdyp1kk7e62ou" path="res://objects/ground/ground.tscn" id="2_u6cfi"]
-[ext_resource type="Script" path="res://rigid_body_2d.gd" id="4_owiel"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6lveo"]
-friction = 0.3
-bounce = 0.72
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68gl0"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8sxw7")
+beach_ball_scene = ExtResource("2_o3iky")
+spawn_count = 15
 metadata/_edit_vertical_guides_ = [3339.0]
 metadata/_edit_horizontal_guides_ = [1765.0]
 
-[node name="RigidBody2D_ball" parent="." instance=ExtResource("2_o3iky")]
-position = Vector2(1904, 268)
-mass = 0.126
-physics_material_override = SubResource("PhysicsMaterial_6lveo")
-gravity_scale = 0.239
-angular_velocity = 5.23599
-script = null
-
-[node name="RigidBody2D_ball2" parent="." instance=ExtResource("2_o3iky")]
-position = Vector2(1304, -864)
-mass = 0.126
-physics_material_override = SubResource("PhysicsMaterial_6lveo")
-gravity_scale = 0.239
-angular_velocity = 5.23599
-script = null
-
-[node name="RigidBody2D_ball3" parent="." instance=ExtResource("2_o3iky")]
-position = Vector2(3496, 636)
-mass = 0.126
-physics_material_override = SubResource("PhysicsMaterial_6lveo")
-gravity_scale = 0.239
-angular_velocity = 5.23599
-script = null
-
-[node name="RigidBody2D_ball4" parent="." instance=ExtResource("2_o3iky")]
-position = Vector2(4720, 1020)
-mass = 0.126
-physics_material_override = SubResource("PhysicsMaterial_6lveo")
-gravity_scale = 0.239
-angular_velocity = 5.23599
-script = null
-
-[node name="sprite_GodotIce1" type="Sprite2D" parent="."]
-position = Vector2(646, 725)
-rotation = -0.156688
-texture = ExtResource("2_bym4m")
-
-[node name="sprite_GodotIce2" type="Sprite2D" parent="."]
-position = Vector2(1069, 830)
-rotation = 0.517676
-texture = ExtResource("2_bym4m")
-
-[node name="StaticBody2D_ground" parent="." instance=ExtResource("2_u6cfi")]
-position = Vector2(2430, 1180)
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(3360, -822)
-rotation = 2.51681
-color = Color(1, 1, 1, 0)
+[node name="Ground" parent="." instance=ExtResource("2_u6cfi")]
+position = Vector2(636, 308)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3100, 1607)
-zoom = Vector2(0.735, 0.735)
+position = Vector2(1306, 735)
+zoom = Vector2(0.635, 0.635)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(1794, 873)
-script = ExtResource("4_owiel")
+[node name="MouseCollider" type="AnimatableBody2D" parent="."]
+position = Vector2(3, 13)
+script = ExtResource("2_a50gh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseCollider"]
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_68gl0")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(1794, 873)
-motion_mode = 1
-
-[editable path="StaticBody2D_ground"]
+[editable path="Ground"]
