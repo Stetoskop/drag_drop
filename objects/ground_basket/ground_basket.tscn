@@ -173,6 +173,7 @@ position = Vector2(-90, 475)
 linear_velocity = Vector2(300, -650)
 angular_velocity = 0.019984
 ball_scale_mult = 0.8
+pitch_max = 2.5
 
 [node name="Camera2D" type="Camera2D" parent="BasketBall"]
 position = Vector2(0, 2)
