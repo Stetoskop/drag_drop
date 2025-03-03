@@ -1,6 +1,6 @@
-extends Node2D  # Attach this script to your main scene
+extends Node2D
 
-@export var beach_ball_scene: PackedScene  # Assign your BeachBall.tscn in the Inspector
+@export var beach_ball_scene: PackedScene
 @export var spawn_count: int = 5  # Number of beach balls to spawn
 @export var max_spawn_attempts: int = 10  # Max tries before skipping a ball
 

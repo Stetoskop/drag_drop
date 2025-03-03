@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkgha51fvve5x"
-path="res://.godot/imported/NormalMap(1).png-fe4e2ca214c12dbd6c37b6440017a7c0.ctex"
+uid="uid://b3gbidvsxnnvd"
+path="res://.godot/imported/hoop_back.png-36773b15e41b86a4a1dd3db0e46c4bd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/ball_basket/NormalMap(1).png"
-dest_files=["res://.godot/imported/NormalMap(1).png-fe4e2ca214c12dbd6c37b6440017a7c0.ctex"]
+source_file="res://objects/hoop/hoop_back.png"
+dest_files=["res://.godot/imported/hoop_back.png-36773b15e41b86a4a1dd3db0e46c4bd4.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="drag_drop"
-run/main_scene="res://objects/ground_basket/basket_ball.tscn"
+run/main_scene="res://objects/ground_basket/ground_basket.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://objects/ground/icon.svg"
 
@@ -23,6 +23,12 @@ window/size/viewport_height=1080
 [dotnet]
 
 project/assembly_name="drag_drop"
+
+[global_group]
+
+mouse=""
+area=""
+ball=""
 
 [input]
 

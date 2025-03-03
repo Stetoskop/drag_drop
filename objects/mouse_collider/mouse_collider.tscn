@@ -5,8 +5,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_68gl0"]
 radius = 30.0167
 
-[node name="MouseCollider" type="AnimatableBody2D"]
+[node name="MouseCollider" type="AnimatableBody2D" groups=["mouse"]]
 script = ExtResource("1_kk518")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mouse"]]
 shape = SubResource("CircleShape2D_68gl0")
