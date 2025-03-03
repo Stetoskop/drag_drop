@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://pau01ujxc761"]
+
+[ext_resource type="Texture2D" uid="uid://b064ftgdrutlp" path="res://objects/ball_basket/basket_ball_image.png" id="1_5m8r2"]
+[ext_resource type="Texture2D" uid="uid://ces4f6myoj0j6" path="res://objects/ball_basket/SpecularMap.png" id="3_3yubc"]
+[ext_resource type="Texture2D" uid="uid://c711boupe1u5j" path="res://objects/ball_basket/normal linnea.png" id="4_3hs5a"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8u3aq"]
+friction = 0.82
+rough = true
+bounce = 0.62
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crhuh"]
+radius = 64.15
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4ecf6"]
+polygon = PackedVector2Array(-46, 45, -26, 58, -1, 64, 27, 57, 46, 45, 59, 24, 64, 0, 60, -22, 45, -45, 23, -59, 0, -64, -28, -58, -46, -44, -60, -23, -63, 1, -58, 27)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7euk0"]
+diffuse_texture = ExtResource("1_5m8r2")
+normal_texture = ExtResource("4_3hs5a")
+specular_texture = ExtResource("3_3yubc")
+specular_color = Color(1, 0.765667, 0.62, 1)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+mass = 0.6
+physics_material_override = SubResource("PhysicsMaterial_8u3aq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_crhuh")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+modulate = Color(1, 1, 1, 0.403922)
+self_modulate = Color(1, 1, 1, 0.282353)
+occluder = SubResource("OccluderPolygon2D_4ecf6")
+
+[node name="BasketBallImage" type="Sprite2D" parent="."]
+light_mask = 3
+scale = Vector2(0.426667, 0.426667)
+texture = SubResource("CanvasTexture_7euk0")
