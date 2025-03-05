@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0kymo4e0ma8"]
 
-[ext_resource type="Script" path="res://objects/mouse_collider/mouse_collider.gd" id="1_kk518"]
+[ext_resource type="Script" uid="uid://dto4tqb42ixal" path="res://objects/mouse_collider/mouse_collider.gd" id="1_kk518"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68gl0"]
 radius = 30.0167

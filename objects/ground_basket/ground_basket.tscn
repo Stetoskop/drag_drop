@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://d1a8t2f2ygk7b"]
 
-[ext_resource type="Script" path="res://objects/ground_basket/main.gd" id="1_c632p"]
+[ext_resource type="Script" uid="uid://byt50lrwhvyoy" path="res://objects/ground_basket/main.gd" id="1_c632p"]
 [ext_resource type="Texture2D" uid="uid://degyaq8aoctjv" path="res://objects/ground_basket/brick_texture/32_rustic bricks texture.jpg" id="2_ky717"]
 [ext_resource type="Texture2D" uid="uid://0bnotbkw8800" path="res://objects/ground_basket/brick_texture/32_rustic bricks_NORM.jpg" id="3_ui4rj"]
 [ext_resource type="Texture2D" uid="uid://b4o7vyo06k56i" path="res://objects/ground_basket/brick_texture/32_rustic bricks_SPEC.jpg" id="4_owwm0"]
